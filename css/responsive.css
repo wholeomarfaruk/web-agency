@@ -1,0 +1,226 @@
+/*================================
+Responsive Css File
+=================================*/
+/*================================
+When Max-width: 1140px css Start
+=================================*/
+@media screen and (max-width:1140px) {
+    .wrapper{
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+        transition: 0.5s;
+    }
+    /* Header area  */
+    #header-section .banner-area .content {
+        -ms-flex-preferred-size: 66.5%;
+        flex-basis: 66.5%;
+        
+    }
+    #header-section .banner-area .banner .img-box {
+        width: 98%;
+    }
+    #header-section .banner-area .content h1 {
+        font-size: 45px;
+        width: 85%;
+    }
+    #header-section .banner-area .content h1 span {
+        font-size: 45px;
+    }
+    #header-section .banner-area .content p {
+        width: 86%;
+    }
+    
+    /* Courses area  */
+    
+    #courses-section .courses-area .course .c-img {
+        width: 290px;
+        
+    }
+}
+/*================================
+When Max-width: 1140px css End
+=================================*/
+
+/*================================
+When Max-width: 1024px css Start
+=================================*/
+@media screen and (max-width:1024px) {
+    .wrapper{
+        max-width: 768px;
+        width: 100%;
+        margin: 0 auto;
+        transition: 0.5s;
+    }
+    /* Header area  */
+    #header-section .banner-area .content {
+        -ms-flex-preferred-size: 43.5%;
+        flex-basis: 43.5%;
+        padding-top: 11.25px;
+    }
+
+    #header-section .banner-area .banner {
+        flex-basis: 56.5%;
+    }
+    #header-section .banner-area .banner .img-box {
+        width: 90%;
+    }
+    #header-section .banner-area .content span {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    #header-section .banner-area .content h1 {
+        font-size: 32.75px;
+        line-height: 50px;
+        width: 84%;
+        margin-top: 0.5px;
+    }
+    
+    #header-section .banner-area .content h1 span {
+        font-size: 32.75px;
+    }
+    #header-section .banner-area .content p {
+        width: 84%;
+        font-size: 11px;
+        padding: 7.5px 0;
+        line-height: 26px;
+    }
+    #header-section .banner-area .content .btn-group {
+        margin-top: 11.25px;
+    }
+    /* featured  */
+    #featured-section .main-box {
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    #featured-section .main-box .child {
+
+        margin: 15px 0;
+    }
+    /* courses  */
+    #courses-section .courses-area {
+        flex-wrap: wrap;
+    }
+    #courses-section .courses-area .course {
+        margin: 15px 0;
+    }
+    
+
+}
+/*================================
+When Max-width: 1024px css End
+=================================*/
+/*================================
+When Max-width: 1024px css Start
+=================================*/
+@media screen and (max-width:768px) {
+    .wrapper{
+        max-width: 95%;
+        width: 100%;
+        margin: 0 auto;
+        transition: 0.5s;
+    }
+    #header-section .navbar {
+        flex-wrap: wrap;
+        position: sticky;
+    }
+    #header-section .navbar .menu-bar-btn {
+        order: 2;
+        display: block;
+        transition: 0.5s;
+
+    }
+    #header-section .navbar .menu {
+        visibility: hidden;
+        width: 100%;
+        order: 3;
+        position: relative;
+        
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    #header-section .navbar .menu #main_menu {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        right: 0;
+        background-color: #282531;
+    }
+    #header-section .navbar .menu #main_menu ul li {
+        margin-left: 0;
+        display: block;
+    }
+    #header-section .navbar .menu #main_menu ul li a {
+        display: block;
+        text-align: center;
+        padding: 15px 0;
+        color: #fff;
+    }
+
+    #header-section .navbar .menu #main_menu ul li a:hover {
+        background-color: #45434b;
+    }
+    #header-section .navbar .menu #main_menu ul li a.singin-btn {
+        background-color: #45434b;
+        margin: 10px;
+        display: block;
+        border-radius: 8px;
+    }
+    #header-section .navbar .menu #main_menu ul li a.singin-btn:hover {
+        background-color: #282531;
+        color: #21b573 !important;
+    }
+
+    #header-section .banner-area {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    #header-section .banner-area .content h1 {
+        line-height: 25px;
+        width: 63%;
+        margin-top: 15px;
+    }
+    #header-section .banner-area .content p {
+        width: 60%;
+    }
+    /* testimonial  */
+    #testimonial-section .testimonial .inner-box {
+
+        flex-direction: column;
+    }
+    #testimonial-section .testimonial .inner-box .img-box {
+        margin-bottom: 20px;
+    }
+    #testimonial-section .testimonial .inner-box .content p {
+        text-align: justify;
+
+    }
+
+    /* footer  */
+    #footer-section .content-area {
+
+        flex-direction: column;
+    }
+    #footer-section .content-area .box {
+        
+        margin-top: 20px;
+        
+    }
+    #footer-section .content-area .box h3 {
+        padding-left: 5px;
+        border-left: 3px solid #21b573;
+    }
+
+    #footer-section .footer-nav ul {
+        
+    }
+    #footer-section .copyright-area {
+        border-top: 1px solid rgb(221 221 221 / 50%);
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+}
+
+/*================================
+When Max-width: 1024px css End
+=================================*/
