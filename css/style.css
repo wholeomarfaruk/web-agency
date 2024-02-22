@@ -38,7 +38,6 @@ font-family: 'Poppins', sans-serif;
 }
 a, a:hover{
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
 
 }
 ul{
@@ -136,21 +135,51 @@ Header Css start
     color: #050748;
     font-family: Poppins,sans-serif;
     font-weight: 500;
-    padding: 0 15px;
+    padding: 0 10px;
     line-height: 70px;
     text-transform: uppercase;
     position: relative;
     display: block;
+    transition: all 0.3s;
+}
+#header-section .navbar .menu #main_menu ul li a .plus-minus .minus{
+    transition: all 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+#header-section .navbar .menu #main_menu ul li a .plus-minus {
+    transition: all 0.3s;
+    width: 0px;
+    height: 0px;
+    display: inline-block;
 }
 
-#header-section .navbar .menu #main_menu ul li a:hover{
-    color: var(--theme-color);
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
+#header-section .navbar .menu #main_menu ul li a:hover .plus-minus .plus{
+    transition: all 0.3s;
+    opacity: 0;
+    visibility: hidden;
+display: none;
+}
+#header-section .navbar .menu #main_menu ul li a:hover .plus-minus .minus{
+    transition: all 0.3s;
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+#header-section .navbar .menu #main_menu ul li a:hover::after{
+    /* content: "-"; */
+    transition: all 0.3s;
+
+
 }
 #header-section .navbar .nav_extra_btn{}
-#header-section .navbar .nav_extra_btn ul{}
+#header-section .navbar .nav_extra_btn ul {
+    padding-left: 10px;
+    align-items: center;
+    display: flex;
+    column-gap: 5px;
+}
 #header-section .navbar .nav_extra_btn ul li {
     display: inline-block;
     margin: 0;
@@ -158,29 +187,70 @@ Header Css start
 }
 #header-section .navbar .nav_extra_btn ul li a{
     
+    
 }
 #header-section .navbar .nav_extra_btn ul li a:hover{}
 #header-section .navbar .nav_extra_btn ul li a i{}
 
 #header-section .navbar .nav_extra_btn ul li a.phone-btn {
-    padding: 15px;
+    padding: 7.5px 13px;
     font-size: 22px;
     border-radius: 50%;
+    text-align: center;
+    display: block;
     color: #fff;
-    background: linear-gradient(45deg, #fa0b7d, #0727d3);
+    background: linear-gradient(90deg, #EF2C94, #B22CD4);
 }
-#header-section .navbar .nav_extra_btn ul li a.text-request{
-    padding: 15px 15px;
+#header-section .navbar .nav_extra_btn ul li a.phone-btn:hover {
+    background: linear-gradient(90deg, #da4c98, #bd4dda);
+}
+
+#header-section .navbar .nav_extra_btn ul li.text-request a {
+    padding: 12px 22.02px;
     color: #fff;
-    background: linear-gradient(45deg, black, transparent);
+    background: linear-gradient(45deg, #633FBA , rgb(80 168 243));
     border-radius: 25px;
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+#header-section .navbar .nav_extra_btn ul li.text-request a .content {
+    position: relative;
+    z-index: 1;
+}
+#header-section .navbar .nav_extra_btn ul li.text-request a .btn-effect {
+    content: "";
+    position: absolute;
+    width: 34%;
+    right: 0;
+    top: 0;
+    border-radius: 60px 0px 0px;
+    z-index: 0;
+    height: 100%;
+    background-color: rgb(80 168 243 / 80%);
+    transition: all 0.5s;
+}
+#header-section .navbar .nav_extra_btn ul li.text-request:hover  .btn-effect {
+    width: 73%;
+    transition: all 0.5s;
+
 }
 #header-section .navbar .nav_extra_btn ul li a.menu-bar-btn{}
+  
 #header-section .navbar .nav_extra_btn ul li a.night-mode {
-    background-color: yellow;
-    padding: 5px;
+    background-color: white;
+    padding: 5px 2px;
     border-radius: 50%;
     color: #000;
+}
+#header-section .navbar .nav_extra_btn ul li a.night-mode i {
+    background-color: yellow;
+    border-radius: 50%;
+    color: #000;
+    padding: 3px 6px;
 }
 /*=================================
 Header Css End
