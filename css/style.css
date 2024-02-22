@@ -11,45 +11,54 @@
 /*=================================
 Css Variable Start
 ===================================*/
-:root{
-    --theme-color:#21B573; /*21B573*/
+:root {
+    --theme-color: #21B573;
+    /*21B573*/
 }
+
 /*=================================
 Css Variable End
 ===================================*/
 /*=================================
 Global Css Start
 ===================================*/
-*{
+* {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
-.wrapper{
+
+.wrapper {
     max-width: 1140px;
     width: 100%;
     margin: 0 auto;
     transition: 0.5s;
 }
-body{
-font-family: 'Poppins', sans-serif;
+
+body {
+    font-family: 'Poppins', sans-serif;
 
 }
-a, a:hover{
+
+a,
+a:hover {
     text-decoration: none;
 
 }
-ul{
-    margin-bottom:0;
-    padding-left:0;
+
+ul {
+    margin-bottom: 0;
+    padding-left: 0;
     list-style: none;
 }
-li{
+
+li {
     margin: 0;
     padding: 0;
 }
-img{
+
+img {
     width: 100%;
     height: 100%;
 }
@@ -67,12 +76,46 @@ img{
     padding-bottom: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
-.slide-down{
+
+.slide-down {
     top: 100% !important;
-    
+
     opacity: 1 !important;
     transition: all 0.5s;
     visibility: visible !important;
+}
+.btn-group-vertical>.btn, .btn-group>.btn {
+    position: relative;
+    flex: 1 1 auto;
+}
+.btn {
+    padding: 20px 40px;
+    background: linear-gradient(45deg, #FFB785, #FF358D);
+    color: #fff;
+    border-radius: 50px;
+    border: none !important;
+}
+.btn-effect {
+    content: "";
+    position: absolute;
+    width: 34%;
+    right: 0;
+    top: 0;
+    border-radius: 60px 0px 0px;
+    z-index: 0;
+    height: 100%;
+    background-color: rgb(255 255 255 / 20%);
+    transition: all 0.5s;
+}
+.btn-content {
+    position: relative;
+    z-index: 1;
+}
+.infinity-animation-toleft {
+    animation: infinity-animation-toleft infinite 2s;
+    position: relative;
+    display: inline-block;
+    width: 30px;
 }
 
 /*=================================
@@ -86,6 +129,7 @@ Header Css start
     padding: 0;
     width: 100%;
     background-image: url("../img/firstbg1.png");
+    padding-top: 10px;
 }
 #header-section .navbar {
     position: -webkit-sticky;
@@ -102,40 +146,57 @@ Header Css start
     padding: 0;
     align-items: center;
 }
-#header-section .wrapper{
+
+#header-section > .wrapper {
     max-width: 97%;
 }
-#header-section .wrapper .wrapper{
+
+#header-section > .wrapper > .wrapper {
     max-width: 97%;
 }
+
 #header-section .navbar .logo {
     max-height: 75px;
     flex: auto;
 }
-#header-section .navbar .menu-bar-btn{
+
+#header-section .navbar .menu-bar-btn {
     display: none;
     transition: 0.5s;
     width: 50px;
     cursor: pointer;
     height: 50px;
 }
-#header-section .navbar .logo img{
+
+#header-section .navbar .logo img {
     width: auto !important;
     height: 100%;
 }
-#header-section .navbar .menu{
-   
-}
-#header-section .navbar .menu #main_menu{
-   
-}
-#header-section .navbar .menu #main_menu ul{
-   
-}
+
+#header-section .navbar .menu {}
+
+#header-section .navbar .menu #main_menu {}
+
+#header-section .navbar .menu #main_menu ul {}
+
 #header-section .navbar .menu #main_menu ul li {
     margin-left: 0;
     display: inline-block;
     position: relative;
+}
+#header-section .navbar .menu #main_menu ul li .dropdown-mega-area{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-height: 300px;
+    background-color: antiquewhite;
+}
+#header-section .navbar .menu #main_menu ul li:hover .dropdown-mega-area{
+    display: block;
+
 }
 
 .border-bottom-effect {
@@ -148,15 +209,16 @@ Header Css start
     background-color: #050748;
     transition: all 0.5s;
 }
+
 #header-section .navbar .menu #main_menu ul li:hover .border-bottom-effect {
-   width: 100%;
-   transition: all 0.5s;
+    width: 100%;
+    transition: all 0.5s;
 }
 
 #header-section .navbar .menu #main_menu ul li a {
     font-size: 16px;
     color: #050748;
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
     font-weight: 500;
     padding: 0 10px;
     line-height: 70px;
@@ -165,12 +227,14 @@ Header Css start
     display: block;
     transition: all 0.3s;
 }
-#header-section .navbar .menu #main_menu ul li a .plus-minus .minus{
+
+#header-section .navbar .menu #main_menu ul li a .plus-minus .minus {
     transition: all 0.3s;
     opacity: 0;
     visibility: hidden;
     display: none;
 }
+
 #header-section .navbar .menu #main_menu ul li a .plus-minus {
     transition: all 0.3s;
     width: 0px;
@@ -178,42 +242,52 @@ Header Css start
     display: inline-block;
 }
 
-#header-section .navbar .menu #main_menu ul li a:hover .plus-minus .plus{
+#header-section .navbar .menu #main_menu ul li a:hover .plus-minus .plus {
     transition: all 0.3s;
     opacity: 0;
     visibility: hidden;
-display: none;
+    display: none;
 }
-#header-section .navbar .menu #main_menu ul li a:hover .plus-minus .minus{
+
+#header-section .navbar .menu #main_menu ul li a:hover .plus-minus .minus {
     transition: all 0.3s;
     opacity: 1;
     visibility: visible;
     display: block;
 }
-#header-section .navbar .menu #main_menu ul li a:hover::after{
+
+#header-section .navbar .menu #main_menu ul li a:hover::after {
     /* content: "-"; */
     transition: all 0.3s;
 
 
 }
-#header-section .navbar .nav_extra_btn{}
+
+#header-section .navbar .nav_extra_btn {}
+
 #header-section .navbar .nav_extra_btn ul {
     padding-left: 10px;
     align-items: center;
     display: flex;
     column-gap: 5px;
 }
+
 #header-section .navbar .nav_extra_btn ul li {
     display: inline-block;
     margin: 0;
     padding: 0;
 }
-#header-section .navbar .nav_extra_btn ul li a{
-    
-    
+
+#header-section .navbar .nav_extra_btn ul li .dropdown-mega-area {
+ display: none;
+
 }
-#header-section .navbar .nav_extra_btn ul li a:hover{}
-#header-section .navbar .nav_extra_btn ul li a i{}
+
+#header-section .navbar .nav_extra_btn ul li a {}
+
+#header-section .navbar .nav_extra_btn ul li a:hover {}
+
+#header-section .navbar .nav_extra_btn ul li a i {}
 
 #header-section .navbar .nav_extra_btn ul li a.phone-btn {
     padding: 7.5px 13px;
@@ -225,6 +299,7 @@ display: none;
     background: linear-gradient(90deg, #EF2C94, #B22CD4);
     box-shadow: 3px 3px 11px 1px rgb(0 0 0 / 30%);
 }
+
 #header-section .navbar .nav_extra_btn ul li a.phone-btn:hover {
     background: linear-gradient(90deg, #da4c98, #bd4dda);
 }
@@ -232,7 +307,7 @@ display: none;
 #header-section .navbar .nav_extra_btn ul li.text-request a {
     padding: 12px 22.02px;
     color: #fff;
-    background: linear-gradient(45deg, #633FBA , rgb(80 168 243));
+    background: linear-gradient(45deg, #633FBA, rgb(80 168 243));
     border-radius: 25px;
     color: #fff;
     font-size: 16px;
@@ -242,10 +317,12 @@ display: none;
     transition: all 0.5s;
     box-shadow: 3px 3px 11px 1px rgb(0 0 0 / 30%);
 }
-#header-section .navbar .nav_extra_btn ul li.text-request a .content {
+
+#header-section .navbar .nav_extra_btn ul li.text-request a .btn-content {
     position: relative;
     z-index: 1;
 }
+
 #header-section .navbar .nav_extra_btn ul li.text-request a .btn-effect {
     content: "";
     position: absolute;
@@ -258,13 +335,15 @@ display: none;
     background-color: rgb(80 168 243 / 80%);
     transition: all 0.5s;
 }
-#header-section .navbar .nav_extra_btn ul li.text-request:hover  .btn-effect {
+
+#header-section .navbar .nav_extra_btn ul li.text-request:hover .btn-effect {
     width: 73%;
     transition: all 0.5s;
 
 }
-#header-section .navbar .nav_extra_btn ul li a.menu-bar-btn{}
-  
+
+#header-section .navbar .nav_extra_btn ul li a.menu-bar-btn {}
+
 #header-section .navbar .nav_extra_btn ul li a.night-mode {
     background-color: white;
     padding: 5px 2px;
@@ -272,12 +351,114 @@ display: none;
     color: #000;
     box-shadow: 3px 3px 11px 1px rgb(0 0 0 / 30%);
 }
+
 #header-section .navbar .nav_extra_btn ul li a.night-mode i {
     background-color: yellow;
     border-radius: 50%;
     color: #000;
     padding: 3px 6px;
 }
+
+
+
+
+/* banner section  */
+#header-section .banner-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    padding-top: 68px;
+}
+#header-section .banner-area .box{}
+#header-section .banner-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 68px;
+    padding-bottom: 36px;
+    align-items: center;
+}
+#header-section .banner-area .banner{}
+
+#header-section .banner-area .content {
+    -ms-flex-preferred-size: 46.5%;
+        flex-basis: 46.5%;
+    padding-top: 23px;
+}
+#header-section .banner-area .content span {
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: 500;
+}
+#header-section .banner-area .content h1 {
+    line-height: 70px;
+    font-size: 48px;
+    font-weight: 700;
+    width: 78%;
+    margin: 0;
+    margin-top: 10px;
+}
+#header-section .banner-area .content h1 span{
+    line-height: 70px;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--theme-color);
+}
+#header-section .banner-area .content p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 36px;
+    padding: 17px 0;
+    color: #6C6B6B;
+    width: 76%;
+}
+#header-section .banner-area .content .btn-group {
+    margin-top: 15px;
+}
+#header-section .banner-area .content .btn-group a {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    
+}
+#header-section .banner-area .content .btn-group a .btn-content {
+    position: relative;
+    z-index: 1;
+}
+#header-section .banner-area .content .btn-group a:hover .btn-effect {
+    width: 73%;
+    transition: all 0.5s;
+}
+
+#header-section .banner-area .banner .img-box {
+    width: 554px;
+}
+#header-section .banner-area .banner .img-box img{}
 /*=================================
 Header Css End
 ===================================*/
+/*=================================
+Animation Css Start
+===================================*/
+
+@keyframes infinity-animation-toleft{
+    from{
+        right: 0px;
+    }
+    to{
+        right: -10px;
+    }
+    from{
+        right: 0px;
+    }
+    to{
+        right: -10px;
+    }
+}
+/*=================================
+Animation Css End
+===================================*/
+
+
