@@ -102,6 +102,12 @@ Header Css start
     padding: 0;
     align-items: center;
 }
+#header-section .wrapper{
+    max-width: 97%;
+}
+#header-section .wrapper .wrapper{
+    max-width: 97%;
+}
 #header-section .navbar .logo {
     max-height: 75px;
     flex: auto;
@@ -129,7 +135,24 @@ Header Css start
 #header-section .navbar .menu #main_menu ul li {
     margin-left: 0;
     display: inline-block;
+    position: relative;
 }
+
+.border-bottom-effect {
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #050748;
+    transition: all 0.5s;
+}
+#header-section .navbar .menu #main_menu ul li:hover .border-bottom-effect {
+   width: 100%;
+   transition: all 0.5s;
+}
+
 #header-section .navbar .menu #main_menu ul li a {
     font-size: 16px;
     color: #050748;
@@ -200,6 +223,7 @@ display: none;
     display: block;
     color: #fff;
     background: linear-gradient(90deg, #EF2C94, #B22CD4);
+    box-shadow: 3px 3px 11px 1px rgb(0 0 0 / 30%);
 }
 #header-section .navbar .nav_extra_btn ul li a.phone-btn:hover {
     background: linear-gradient(90deg, #da4c98, #bd4dda);
@@ -216,6 +240,7 @@ display: none;
     display: block;
     overflow: hidden;
     transition: all 0.5s;
+    box-shadow: 3px 3px 11px 1px rgb(0 0 0 / 30%);
 }
 #header-section .navbar .nav_extra_btn ul li.text-request a .content {
     position: relative;
@@ -245,6 +270,7 @@ display: none;
     padding: 5px 2px;
     border-radius: 50%;
     color: #000;
+    box-shadow: 3px 3px 11px 1px rgb(0 0 0 / 30%);
 }
 #header-section .navbar .nav_extra_btn ul li a.night-mode i {
     background-color: yellow;
